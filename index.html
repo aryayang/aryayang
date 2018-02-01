@@ -262,137 +262,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://coderyangyang.github.io/aryayang/2018/02/01/my-new-post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aryayang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/aryayang/images/me.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="aryayang的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/aryayang/2018/02/01/my-new-post/" itemprop="url">svn提交和代码部署的原理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-01T13:50:22+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="关于svn踩了一个坑，也明白了关于代码提交和部署的原理"><a href="#关于svn踩了一个坑，也明白了关于代码提交和部署的原理" class="headerlink" title="#关于svn踩了一个坑，也明白了关于代码提交和部署的原理"></a>#关于svn踩了一个坑，也明白了关于代码提交和部署的原理</h2><p><strong>前提</strong></p>
-<p>svn的代码是保存在远程仓库的，机器上的代码是远程仓库的拷贝，二者没有什么关系。</p>
-<p>1.如果是分支上线</p>
-<p>则在部署的时候相当于把分支部署在了机器上，然后点击上线确认完成的时候是把分支部署到了机器上了，然后这个时候主干的代码还没有你自己的提交，这个时候就需要进行反向合并了，反向合并就是已主干为基准，合同分支，把你在分支上的修改弄到主干上，这样确保别人在主干上拉代码的时候可以有你的修改，其实部署的机器上就是你的分支，但是这是分支和主干已经完全一样了，根本不用去区分了。</p>
-<p>2.如果是主干上线的话，</p>
-<p>你在主干上进行了更改，但是并没有提交，你去部署的时候还是部署的原来的，所以就不会有更改，这时你去提交到主干的时候，svn上虽然有了你的代码，但是机器上是没有你的代码的，这个时候应该重新部署一遍机器才可以。正确的做法是应该在主干上修改 ，然后直接在主干上提交，然后提交上线单去部署，这个时候机器上才会有你刚才更改过的新主干的代码。部署的时候还没有提交，机器上当然没有你刚才，更改的代码了，你部署之后才提交的，只能在svn上看到，但是机器上是看不到的。<br>3.常用的svn命令</p>
-<pre><code>svn cp 新建分支
-svn ci 提交
-svn merge 合并
-svn export --force 导出diff 
-svn resolved 解决了冲突
-svn revert 回退修改
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://coderyangyang.github.io/aryayang/2018/01/27/Hello-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -422,7 +291,7 @@ svn revert 回退修改
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-27T00:19:38+08:00">
                 2018-01-27
@@ -542,7 +411,7 @@ svn revert 回退修改
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-26T23:06:32+08:00">
                 2018-01-26
@@ -678,8 +547,8 @@ svn revert 回退修改
               
                 <a href="/aryayang/archives">
               
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -729,7 +598,7 @@ svn revert 回退修改
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
