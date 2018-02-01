@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -85,7 +85,7 @@
 <meta property="og:url" content="https://coderyangyang.github.io/2018/02/01/svn提交和部署的原理/index.html">
 <meta property="og:site_name" content="aryayang的博客">
 <meta property="og:description" content="#svn提交的原理前提 svn的代码是保存在远程仓库的，机器上的代码是远程仓库的拷贝，二者没有什么关系。 1.如果是分支上线 则在部署的时候相当于把分支部署在了机器上，然后点击上线确认完成         的时候是把分支部署到了机器上了，然后这个时候主干的代码还没有你自己的提交，这个时候就需要进行反向合并了，反向合并就是已主干为基准，合同分支，把你在分支上的修改弄到主干上，这样确保别人在主干上拉代">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-01T06:13:11.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="svn提交和部署的原理">
@@ -131,13 +131,22 @@
 
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '113398694-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -289,9 +298,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-01T14:08:22+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T14:08:22+08:00">
                 2018-02-01
               </time>
             
@@ -304,6 +313,17 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/aryayang/2018/02/01/svn提交和部署的原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/01/svn提交和部署的原理/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -393,6 +413,32 @@ svn revert 回退修改
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
     </div>
   </div>
 
@@ -402,6 +448,16 @@ svn revert 回退修改
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -428,10 +484,10 @@ svn revert 回退修改
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -445,7 +501,7 @@ svn revert 回退修改
                 alt="aryayang" />
             
               <p class="site-author-name" itemprop="name">aryayang</p>
-              <p class="site-description motion-element" itemprop="description">Google开发者，机器学习，数据分析</p>
+              <p class="site-description motion-element" itemprop="description">有些话，我想说予你听</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -456,7 +512,7 @@ svn revert 回退修改
                 <a href="/aryayang/archives">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -522,7 +578,7 @@ svn revert 回退修改
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -530,7 +586,7 @@ svn revert 回退修改
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -539,6 +595,15 @@ svn revert 回退修改
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65122075";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -655,6 +720,26 @@ svn revert 回退修改
 
   
 
+    
+      <script id="dsq-count-scr" src="https://aryayang.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://coderyangyang.github.io/2018/02/01/svn提交和部署的原理/';
+          this.page.identifier = '2018/02/01/svn提交和部署的原理/';
+          this.page.title = 'svn提交和部署的原理';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://aryayang.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -667,10 +752,6 @@ svn revert 回退修改
   
 
 
-
-
-
-  
 
 
 
