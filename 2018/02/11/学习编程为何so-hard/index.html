@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="svn," />
+  <meta name="keywords" content="学习编程为何如此艰难," />
 
 
 
@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="#svn提交的原理前提 svn的代码是保存在远程仓库的，机器上的代码是远程仓库的拷贝，二者没有什么关系。 1.如果是分支上线 则在部署的时候相当于把分支部署在了机器上，然后点击上线确认完成         的时候是把分支部署到了机器上了，然后这个时候主干的代码还没有你自己的提交，这个时候就需要进行反向合并了，反向合并就是已主干为基准，合同分支，把你在分支上的修改弄到主干上，这样确保别人在主干上拉代">
-<meta name="keywords" content="svn">
+<meta name="description" content="学习编程为何如此艰难学习编程分为四个阶段 1.甜蜜开始 2.困顿悬崖 3.绝望沙漠 4.展翅飞翔  这四个阶段对应你学习编程的自信心，用图像绘出来如图所示。   在了解这四个阶段之前，先让我们认识两个概念，分别是资源密度和知识深度  资源密度。在你刚开始学习编程的时候你一定会有这样的感觉，上网随便谷歌百度一下，就会有数以千计的资源供你学习。有代码编辑器，有各种入门课程和视频资料供你选择。如此多的资">
+<meta name="keywords" content="学习编程为何如此艰难">
 <meta property="og:type" content="article">
-<meta property="og:title" content="svn提交和部署的原理">
-<meta property="og:url" content="https://coderyangyang.github.io/2018/02/01/svn提交和部署的原理/index.html">
+<meta property="og:title" content="学习编程为何如此艰难">
+<meta property="og:url" content="https://coderyangyang.github.io/2018/02/11/学习编程为何so-hard/index.html">
 <meta property="og:site_name" content="aryayang的博客">
-<meta property="og:description" content="#svn提交的原理前提 svn的代码是保存在远程仓库的，机器上的代码是远程仓库的拷贝，二者没有什么关系。 1.如果是分支上线 则在部署的时候相当于把分支部署在了机器上，然后点击上线确认完成         的时候是把分支部署到了机器上了，然后这个时候主干的代码还没有你自己的提交，这个时候就需要进行反向合并了，反向合并就是已主干为基准，合同分支，把你在分支上的修改弄到主干上，这样确保别人在主干上拉代">
+<meta property="og:description" content="学习编程为何如此艰难学习编程分为四个阶段 1.甜蜜开始 2.困顿悬崖 3.绝望沙漠 4.展翅飞翔  这四个阶段对应你学习编程的自信心，用图像绘出来如图所示。   在了解这四个阶段之前，先让我们认识两个概念，分别是资源密度和知识深度  资源密度。在你刚开始学习编程的时候你一定会有这样的感觉，上网随便谷歌百度一下，就会有数以千计的资源供你学习。有代码编辑器，有各种入门课程和视频资料供你选择。如此多的资">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-04T12:57:10.366Z">
+<meta property="og:image" content="https://coderyangyang.github.io/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_confidence_competence.png">
+<meta property="og:image" content="https://coderyangyang.github.io/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_resource_density.png">
+<meta property="og:image" content="https://coderyangyang.github.io/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_scope_of_knowledge.png">
+<meta property="og:image" content="https://coderyangyang.github.io/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_combined_chart.png">
+<meta property="og:updated_time" content="2018-02-11T03:40:25.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="svn提交和部署的原理">
-<meta name="twitter:description" content="#svn提交的原理前提 svn的代码是保存在远程仓库的，机器上的代码是远程仓库的拷贝，二者没有什么关系。 1.如果是分支上线 则在部署的时候相当于把分支部署在了机器上，然后点击上线确认完成         的时候是把分支部署到了机器上了，然后这个时候主干的代码还没有你自己的提交，这个时候就需要进行反向合并了，反向合并就是已主干为基准，合同分支，把你在分支上的修改弄到主干上，这样确保别人在主干上拉代">
+<meta name="twitter:title" content="学习编程为何如此艰难">
+<meta name="twitter:description" content="学习编程为何如此艰难学习编程分为四个阶段 1.甜蜜开始 2.困顿悬崖 3.绝望沙漠 4.展翅飞翔  这四个阶段对应你学习编程的自信心，用图像绘出来如图所示。   在了解这四个阶段之前，先让我们认识两个概念，分别是资源密度和知识深度  资源密度。在你刚开始学习编程的时候你一定会有这样的感觉，上网随便谷歌百度一下，就会有数以千计的资源供你学习。有代码编辑器，有各种入门课程和视频资料供你选择。如此多的资">
+<meta name="twitter:image" content="https://coderyangyang.github.io/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_confidence_competence.png">
 
 
 
@@ -120,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://coderyangyang.github.io/2018/02/01/svn提交和部署的原理/"/>
+  <link rel="canonical" href="https://coderyangyang.github.io/2018/02/11/学习编程为何so-hard/"/>
 
 
 
 
 
-  <title>svn提交和部署的原理 | aryayang的博客</title>
+  <title>学习编程为何如此艰难 | aryayang的博客</title>
   
 
 
@@ -272,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://coderyangyang.github.io/aryayang/2018/02/01/svn提交和部署的原理/">
+    <link itemprop="mainEntityOfPage" href="https://coderyangyang.github.io/aryayang/2018/02/11/学习编程为何so-hard/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aryayang">
@@ -289,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">svn提交和部署的原理</h1>
+          <h1 class="post-title" itemprop="name headline">学习编程为何如此艰难</h1>
         
 
         <div class="post-meta">
@@ -301,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T14:08:22+08:00">
-                2018-02-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T11:26:18+08:00">
+                2018-02-11
               </time>
             
 
@@ -324,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/aryayang/categories/svn/" itemprop="url" rel="index">
-                    <span itemprop="name">svn</span>
+                  <a href="/aryayang/categories/学习技能/" itemprop="url" rel="index">
+                    <span itemprop="name">学习技能</span>
                   </a>
                 </span>
 
@@ -361,20 +366,29 @@
       
 
       
-        <h2 id="svn提交的原理"><a href="#svn提交的原理" class="headerlink" title="#svn提交的原理"></a>#svn提交的原理</h2><p><strong>前提</strong></p>
-<p>svn的代码是保存在远程仓库的，机器上的代码是远程仓库的拷贝，二者没有什么关系。</p>
-<p>1.如果是分支上线</p>
-<p>则在部署的时候相当于把分支部署在了机器上，然后点击上线确认完成         的时候是把分支部署到了机器上了，然后这个时候主干的代码还没有你自己的提交，这个时候就需要进行反向合并了，反向合并就是已主干为基准，合同分支，把你在分支上的修改弄到主干上，这样确保别人在主干上拉代码的时候可以有你的修改，其实部署的机器上就是你的分支，但是这是分支和主干已经完全一样了，根本不用去区分了。</p>
-<p>2.如果是主干上线的话</p>
-<p>你在主干上进行了更改，但是并没有提交，你去部署的时候还是部署的原来的，所以就不会有更改，这时你去提交到主干的时候，svn上虽然有了你的代码，但是机器上是没有你的代码的，这个时候应该重新部署一遍机器才可以。正确的做法是应该在主干上修改 ，然后直接在主干上提交，然后提交上线单去部署，这个时候机器上才会有你刚才更改过的新主干的代码。部署的时候还没有提交，机器上当然没有你刚才，更改的代码了，你部署之后才提交的，只能在svn上看到，但是机器上是看不到的。</p>
-<p>3.常用的svn命令</p>
-<pre><code>svn cp 新建分支
-svn ci 提交
-svn merge 合并
-svn export --force 导出diff 
-svn resolved 解决了冲突
-svn revert 回退修改
-</code></pre>
+        <h1 id="学习编程为何如此艰难"><a href="#学习编程为何如此艰难" class="headerlink" title="学习编程为何如此艰难"></a>学习编程为何如此艰难</h1><p>学习编程分为四个阶段</p>
+<p>1.甜蜜开始</p>
+<p>2.困顿悬崖</p>
+<p>3.绝望沙漠</p>
+<p>4.展翅飞翔</p>
+<blockquote>
+<p>这四个阶段对应你学习编程的自信心，用图像绘出来如图所示。</p>
+</blockquote>
+<p><img src="/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_confidence_competence.png" alt="自信心分布图"></p>
+<p>在了解这四个阶段之前，先让我们认识两个概念，分别是资源密度和知识深度</p>
+<blockquote>
+<p>资源密度。在你刚开始学习编程的时候你一定会有这样的感觉，上网随便谷歌百度一下，就会有数以千计的资源供你学习。有代码编辑器，有各种入门课程和视频资料供你选择。如此多的资源让你目不暇接，随便选择一个就会让你踏上学习编程的道路。<br>不幸的是在后面的学习阶段过程中，资源密度都会严重下降。任何从初学者到中级水平的开发者都会感觉资源的密度在刚入门的时候和后来自己独立开发项目有着很大的区别。<br>以下是四个阶段学习过程中资源密度分布图</p>
+</blockquote>
+<p><img src="/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_resource_density.png" alt="资源密度分布图"></p>
+<blockquote>
+<p>知识深度。当你第一次开始学习编程的时候，你需要理解的一系列事情是很简单的。好比说给一个人解释for循环似乎要比给一个人解释什么是反射函数一样。初学者学习的知识都是一些基础的语法以及概念，这个时期的知识深度是很浅显的，但是随着你对学习的深入，知识开始变得复杂起来。下图是学习过程中的知识深度分布图。</p>
+</blockquote>
+<p><img src="/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_scope_of_knowledge.png" alt="知识深度分布图"></p>
+<blockquote>
+<p>总结以上两个概念，学习编程的可以用下图来概括。</p>
+</blockquote>
+<p><img src="/aryayang/2018/02/11/学习编程为何so-hard/coding_is_hard_combined_chart.png" alt="知识深度分布图"></p>
+
       
     </div>
     
@@ -391,7 +405,7 @@ svn revert 回退修改
       
         <div class="post-tags">
           
-            <a href="/aryayang/tags/svn/" rel="tag"># svn</a>
+            <a href="/aryayang/tags/学习编程为何如此艰难/" rel="tag"># 学习编程为何如此艰难</a>
           
         </div>
       
@@ -404,15 +418,15 @@ svn revert 回退修改
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/aryayang/2018/02/04/faith/" rel="next" title="faith">
+                <i class="fa fa-chevron-left"></i> faith
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/aryayang/2018/02/04/faith/" rel="prev" title="faith">
-                faith <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -590,7 +604,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#svn提交的原理"><span class="nav-number">1.</span> <span class="nav-text">#svn提交的原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#学习编程为何如此艰难"><span class="nav-number">1.</span> <span class="nav-text">学习编程为何如此艰难</span></a></li></ol></div>
             
 
           </div>
